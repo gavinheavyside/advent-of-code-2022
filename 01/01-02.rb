@@ -10,5 +10,5 @@ while line = $stdin.gets
   end
 end
 
-puts loads.map{ |items| items.reduce(:+) }.sort.reverse.take(3).reduce(:+)
+puts loads.map{ |items| items.reduce(:+) }.sort_by{ |total| -total }.take(3).reduce(:+)
 
